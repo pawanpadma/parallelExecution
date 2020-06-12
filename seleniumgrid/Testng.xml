@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Suite" parallel="tests">
+  <test name="FirstTest">
+    <parameter name="browser" value="chrome"/>
+   
+    
+      <groups>
+      <run>
+      <include name="2" />
+      </run>
+   </groups>
+    <classes>
+      <class name="com.selenium.seleniumgrid.test.SanityTest"/>
+    </classes>
+  </test> 
+  
+  <test name="secondtest">
+    <parameter name="browser" value="chrome"/>
+    
+    
+      <groups>
+      <run>
+      <include name="1" />
+      </run>
+   </groups>
+    <classes>
+      <class name="com.selenium.seleniumgrid.test.SanityTest"/>
+    </classes>
+  </test> 
+  <!-- <test name="SecondTest">
+    <parameter name="browser" value="chrome"/>
+    
+    <classes>
+      <class name="com.selenium.presta.tests.SanityTest"/>
+    </classes> 
+  </test> --> <!-- Test -->
+ <!--  <test name="ThirdTest">
+    <parameter name="browser" value="internet explorer"/>
+   
+    <classes>
+      <class name="com.selenium.SiriusXM_WebAutomation.test.SanityTest"/>
+    </classes>
+  </test>  --><!-- Test -->
+</suite> <!-- Suite -->
