@@ -10,8 +10,15 @@ pipeline {
             }
             stage('Install Dependencies'){
                 steps{
-					cmd_exec('docker pull elgalu/selenium')
+					sh 'docker pull elgalu/selenium'
 					cmd_exec('docker pull dosel/zalenium')
+                    
+                }
+            }
+		    stage('Install Dependenc'){
+                steps{
+					
+					sh'docker pull dosel/zalenium'
                     
                 }
             }
