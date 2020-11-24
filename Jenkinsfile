@@ -41,7 +41,7 @@ pipeline {
             stage ('Run Tests'){
                 steps{
 			bat script:'''
-			cd /seleniumgrid
+			cd seleniumgrid
                      mvn clean test
 		      '''
                 }
