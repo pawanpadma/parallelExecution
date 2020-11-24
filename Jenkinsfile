@@ -33,12 +33,16 @@ pipeline {
         
             stage ('Start Zalenium'){
                 steps{
-                    sh 'docker run --rm -ti --name zalenium -d -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start'
-                }
+			bat script:'''
+                     docker run --rm -ti --name zalenium -d -p 4444:4444 -e PULL_SELENIUM_IMAGE=true -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start
+                '''
+		}
             }
             stage ('Run Tests'){
                 steps{
-                    sh 'mvn clean test'
+			bat script:'''
+                     mvn clean test
+		      '''
                 }
             }
             stage ('Stop Zalenium'){
