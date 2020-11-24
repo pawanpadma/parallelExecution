@@ -28,7 +28,7 @@ public class Driverclass {
 			dc.setCapability(FirefoxDriver.PROFILE, fp);
 			dc.setBrowserName(DesiredCapabilities.firefox().getBrowserName());
 			try {
-				driver.set(new RemoteWebDriver(new URL("http://localhost:4444"), dc));
+				driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), dc));
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -49,7 +49,7 @@ public class Driverclass {
 			 
 			    caps.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 			try {
-				driver.set(new RemoteWebDriver(new URL("http://localhost:4444"), caps));
+				driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps));
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
