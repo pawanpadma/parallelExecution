@@ -10,7 +10,7 @@ pipeline {
             }
             stage('Install Dependencies'){
                 steps{
-			sh script:'''
+			bat script:'''
 			cd C:/Users/PawanPadma
 			 docker pull elgalu/selenium			
 			'''
@@ -21,7 +21,7 @@ pipeline {
 		    stage('Install Dependenc'){
                 steps{
 					
-			sh script:'''
+			bat script:'''
 			cd C:/Users/PawanPadma
 			 docker pull dosel/zalenium		
 			'''
