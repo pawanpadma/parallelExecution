@@ -48,7 +48,9 @@ pipeline {
             }
             stage ('Stop Zalenium'){
                 steps{
-                    sh 'docker stop zalenium'
+			bat script:'''
+                    docker stop zalenium
+		    '''
                 }
             }
     }
