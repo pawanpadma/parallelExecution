@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'laptop2'}    
     stages {
-        stage('Code and Dependencies'){
+       
            
             stage('Checkout Code'){
                 steps{
@@ -29,7 +29,7 @@ pipeline {
                     
                 }
             }
-            }
+            
         
             stage ('Start Zalenium'){
                 steps{
